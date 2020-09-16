@@ -3,6 +3,8 @@
 import 'dart:convert';
 
 import 'package:json_annotation/json_annotation.dart';
+import "package:hex/hex.dart";
+
 
 part 'main.g.dart';
 
@@ -17,9 +19,17 @@ class Person {
 }
 
 void main(){
-  _base64();
+  hex();
 }
 
+
+void hex(){
+  var s = "hello world";
+  var b = utf8.encode(s);
+  print(HEX.encode(b));
+
+  print(HEX.decode("68656c6c6f20776f726c64"));
+}
 
 void _base64(){
   var s = "hello world";
