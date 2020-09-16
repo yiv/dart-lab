@@ -11,8 +11,8 @@ void aes_encrypt(String userId, int expiredSeconds){
   final tokenData = {"user_id": userId, "exp": now+expiredSeconds, "iat": now};
   final jsonData = json.encode(tokenData);
   final plainText = base64.encode(utf8.encode(jsonData));
-  final theKey = HEX.encode(utf8.encode("a9PFsAXHiGktp&5!"));
-  final theIv = HEX.encode(utf8.encode("8*2tn&O6wc%x4g1b"));
+  final theKey = HEX.encode(utf8.encode("xxxxxAXHiGktp&5!"));
+  final theIv = HEX.encode(utf8.encode("xxxxx&O6wc%x4g1b"));
 
   print(theKey);
   print(theIv);
