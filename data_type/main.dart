@@ -1,5 +1,5 @@
 void main() {
-  type_test();
+  typeof();
 }
 
 
@@ -18,6 +18,11 @@ void type_test(){
   print(age is int);
   print(age is String);
 
+}
+
+void typeof(){
+  var x= 1.10;
+  print(x.runtimeType);
 }
 
 void const_and_final() {
