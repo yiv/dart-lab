@@ -19,9 +19,17 @@ class Person {
 }
 
 void main(){
-  hex();
+  class_to_json();
 }
 
+class GetUser{
+  String user_ids;
+}
+
+void class_to_json(){
+  var v = GetUser();
+  json.encode(v);
+}
 
 void hex(){
   var s = "hello world";
