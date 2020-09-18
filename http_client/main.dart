@@ -6,6 +6,7 @@ import 'package:hex/hex.dart';
 import 'package:http/http.dart' as http;
 
 const BILI_API_VIDEO_STAT = "http://api.bilibili.com/x/web-interface/archive/stat?";
+const TAP_API_VIDEO_DETAIL = "https://www.taptap.com/webapiv2/video/v2/detail?id=1432919&X-UA=V%3D1%26PN%3DWebApp%26LANG%3Den_US%26VN_CODE%3D1%26VN%3D0.1.0%26LOC%3DCN%26PLT%3DPC%26UID%3De6fd6c1e-6eb9-49ad-b03e-91a801873e27";
 const PHP_API_Prod = "https://a1.fanbook.mobi";
 const PHP_USER_GET_USER = "/api/user/getUser";
 
@@ -67,6 +68,10 @@ Future<void> GetUserInfo(String userId) async {
   print(res);
 }
 
+
+GetTapVideoDetail(String id){
+
+}
 Future<void> GetBiliVideoStat(String id) async {
   var v = parseBiliVideoId(id);
   var reqUrl = "";
