@@ -2,8 +2,9 @@ import 'dart:io';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 
-void main() {
-   print(loop3());
+Future<void> main() async {
+  await wait_multi_future();
+  print("done");
 }
 
 Future<void> wait_multi_future() async {
@@ -19,18 +20,18 @@ Future<void> future1() => loop1();
 Future<void> future2()=> loop2();
 
 Future<void> loop1() async {
-  // for (var i = 0; i < 500; i++) {
-  //   sleep(new Duration(seconds: 1));
-  //   print("##1 ${i}");
-  // }
+  for (var i = 0; i < 500; i++) {
+    await Future.delayed(new Duration(seconds: 10));
+    print("#1 ${i}");
+  }
   return "loop1";
 }
 
-Future<void> loop2() async {
-  // for (var i = 0; i < 500; i++) {
-  //   sleep(new Duration(seconds: 1));
-  //   print("#2 ${i}");
-  // }
+Future<String> loop2() async {
+  for (var i = 0; i < 500; i++) {
+    await Future.delayed(new Duration(seconds: 1));
+    print("#2 ${i}");
+  }
   print("object");
 
   return "loop2";

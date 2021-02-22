@@ -17,3 +17,8 @@ void main(){
   var m = DateTime.parse("2020-09-16 21:05:27");
   print(m);
 }
+
+void duration() {
+  var x = new Duration(seconds: 1);
+
+}
